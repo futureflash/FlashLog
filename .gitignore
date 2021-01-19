@@ -1,5 +1,5 @@
 .vs/
-SourceCode/bin
-SourceCode/obj
-FodyWeavers.xml
-FodyWeavers.xsd
+SourceCode/bin/
+SourceCode/obj/
+SourceCode/FodyWeavers.xml
+SourceCode/FodyWeavers.xsd
