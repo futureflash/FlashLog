@@ -1,4 +1,5 @@
 .vs/
+SourceCode/.vs/
 SourceCode/bin/
 SourceCode/obj/
 SourceCode/FodyWeavers.xml
