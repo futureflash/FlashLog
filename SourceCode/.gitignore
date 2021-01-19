@@ -1,7 +1,0 @@
-packages/
-bin/
-obj/
-App.config
-FodyWeavers.xml
-FodyWeavers.xsd
-packages.config

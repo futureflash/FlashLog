@@ -58,7 +58,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="Ude, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Ude.dll</HintPath>
+      <HintPath>.\Ude.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
