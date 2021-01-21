@@ -3,5 +3,5 @@
     <version>1.2.0.0</version>
     <url>https://github.com/laithayoub71/FlashLog/releases/latest/download/FlashLog.exe</url>
     <changelog>https://raw.githubusercontent.com/laithayoub71/FlashLog/master/Changelog.txt</changelog>
-	<mandatory mode="1">true</mandatory>
+	<mandatory mode="2">true</mandatory>
 </item>
