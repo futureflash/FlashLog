@@ -104,7 +104,7 @@ namespace FlashLog
 
         private void FlashLogForm_Load(object sender, EventArgs e)
         {
-            AutoUpdater.Start("https://github.com/laithayoub71/FlashLog/master/Update.xml");
+            AutoUpdater.Start("https://raw.githubusercontent.com/laithayoub71/FlashLog/master/Update.xml");
 
 
             if (savedPath.lastUsedPath.Length > 1 && File.Exists(savedPath.lastUsedPath))
