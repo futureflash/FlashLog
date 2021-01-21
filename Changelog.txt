@@ -1,0 +1,12 @@
+
+v1.1 (Latest Version):
+[Released on 1/20/2021]
+
+• Added OTA updates
+	-- if you see this, then it's working
+---------------------------------------------------------------------
+v1.0:
+[Released on 1/18/2021]
+
+• Initial release! Let's soo how it goes
+---------------------------------------------------------------------

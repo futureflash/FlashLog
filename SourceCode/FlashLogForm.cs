@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Ude;
+using AutoUpdaterDotNET;
 
 namespace FlashLog
 {
@@ -24,7 +25,7 @@ namespace FlashLog
             try
             {
                 openFileDialog1.FileName = "log.txt";
-                openFileDialog1.Filter = "Text File|*.txt|Log File|*.log|All Files|*.*";
+                openFileDialog1.Filter = "Text File|*.txt|Log File|*.log";
                 openFileDialog1.FilterIndex = 1;
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
@@ -103,6 +104,9 @@ namespace FlashLog
 
         private void FlashLogForm_Load(object sender, EventArgs e)
         {
+            AutoUpdater.Start("https://github.com/laithayoub71/FlashLog/master/Update.xml");
+
+
             if (savedPath.lastUsedPath.Length > 1 && File.Exists(savedPath.lastUsedPath))
             {
                 toolsToolStripMenuItem.Visible = false;
@@ -143,7 +147,7 @@ namespace FlashLog
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("FlashLog is a simple program that reads your log file of choice, and dynamically updates when the log file has been changed\r\n------------------------------------------------------------------------------\r\n\r\nHow to Use:\r\n\r\n1. Click 'Browse' and locate your log file. That's it lol\r\n\r\nThe program will then display your log file and will update automatically every half second\r\n\r\n------------------------------------------------------------------------------\r\n\r\nCreated by FutureFlash on 1/18/2021", "FlashLog (v1.0)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("FlashLog is a simple program that reads your log file of choice, and dynamically updates when the log file has been changed\r\n------------------------------------------------------------------------------\r\n\r\nHow to Use:\r\n\r\n1. Click 'Browse' and locate your log file. That's it lol\r\n\r\nThe program will then display your log file and will update automatically every half second\r\n\r\n------------------------------------------------------------------------------\r\n\r\nCreated by FutureFlash on 1/18/2021", "FlashLog (v1.1)", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void clearSavedPathToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,6 +176,7 @@ namespace FlashLog
             foreach (string file in files)
             {
                 string readLogFile = File.ReadAllText(file);
+                var ext = Path.GetExtension(file);
                 using (FileStream fs = File.OpenRead(file))
                 {
                     CharsetDetector cdet = new CharsetDetector();
@@ -189,7 +194,7 @@ namespace FlashLog
                     }
                     else
                     {
-                        MessageBox.Show("The file you provided is not a valid text file", "Encoding Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("The file you're trying to drag is invalid. Only these extensions are supported: .txt | .log", "Invalid File Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
