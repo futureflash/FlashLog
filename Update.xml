@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
-    <version>1.1.0.0</version>
+    <version>1.2.0.0</version>
     <url>https://github.com/laithayoub71/FlashLog/releases/latest/download/FlashLog.exe</url>
     <changelog>https://raw.githubusercontent.com/laithayoub71/FlashLog/master/Changelog.txt</changelog>
 	<mandatory mode="1">true</mandatory>
